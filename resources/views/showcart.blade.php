@@ -7,12 +7,12 @@
             <td style="padding: 10px; font-size: 20px">Product Name</td>
             <td style="padding: 10px; font-size: 20px">Quantity</td>
             <td style="padding: 10px; font-size: 20px">Price</td>
-            <!-- <td style="padding: 10px; font-size: 20px">Image</td> -->
+            <td style="padding: 10px; font-size: 20px">Image</td>
             <td style="padding: 10px; font-size: 20px">Action</td>
         </tr>
 
     <form action="{{route('order')}}" method="POST">
-        @csrf
+        @csrf  
         @foreach($cart as $carts)
         <tr style="background-color: grey">
             <td style="color:white; padding: 10px;">
@@ -24,11 +24,16 @@
             <td style="color:white; padding: 10px;">
             <input type="text" name="price[]" value="{{$carts->price}}" hidden="">
             {{$carts->price}}</td>
+            <td style="color:white; padding: 10px;">
+            <input type="image" style="height: 100px; width=100px;" name="image[]" value="{{$carts->image}}" src="/productimage/{{$carts->image}}">
+            </td>
             <td style="color:white; padding: 10px;"><a class="btn btn-danger" href="{{route('deletecart', $carts->id)}}">Delete</a></td>
         </tr>
         @endforeach
         </table><br> 
         <button class="btn btn-success">Confirm Order</button>  
+        <a class="btn btn-success" href="{{route('myorder')}}">Check Order</a>
+        
     </form>
 </div>
 

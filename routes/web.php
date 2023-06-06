@@ -26,16 +26,20 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/register', [HomeController::class, 'register'])->name('register');
+Route::post('/newmessage', [HomeController::class, 'newmessage'])->name('newmessage');
+
 
 Route::post('/login', [UserController::class, 'loginUser'])->name('loginUser');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::post('/register', [UserController::class, 'registerUser'])->name('registerUser');
-Route::post('/message', [UserController::class, 'message'])->name('message');
 
 Route::post('/addcart/{id}',[HomeController::class,'addcart'])->name('addcart');
 Route::get('/showcart',[HomeController::class,'showcart'])->name('showcart');
 Route::get('/deletecart/{id}',[HomeController::class,'deletecart'])->name('deletecart');
 Route::post('/order',[HomeController::class,'confirmorder'])->name('order');
+Route::get('/myorder',[HomeController::class,'myorder'])->name('myorder');
+
+
 
 // <--Admin Panel-->
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
@@ -50,3 +54,5 @@ Route::post('/updateproduct/{id}',[AdminController::class,'updateproduct'])->nam
 Route::get('/showorder',[AdminController::class,'showorder'])->name('showorder');
 Route::get('/deleteorder/{id}',[AdminController::class,'deleteorder'])->name('deleteorder');
 Route::get('/updatestatus/{id}',[AdminController::class,'updatestatus'])->name('updatestatus');
+Route::get('/showmessage',[AdminController::class,'showmessage'])->name('showmessage');
+Route::get('/deletemessage/{id}',[AdminController::class,'deletemessage'])->name('deletemessage');

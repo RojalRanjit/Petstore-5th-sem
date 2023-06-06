@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-// use App\Models\Cart;
+use App\Models\Contact;
 use App\Models\Order;
 
 
@@ -82,22 +82,6 @@ class AdminController extends Controller
     {
         $order = order::all();
         return view ('admin.showorder',compact('order'));
-        // if(Auth::id())
-        // {
-        //     if(Auth::user()->usertype=='1')
-        //     {
-        //         $order = order::all();
-        //         return view ('admin.showorder',compact('order'));
-        //     }
-        //     else
-        //     {
-        //         return redirect()->back();
-        //     }
-        // }
-        // else
-        // {
-        //     return redirect('login');
-        // }
     }
     public function deleteorder($id)
     {
@@ -108,6 +92,22 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Order Deleted Successfully');
 
     }
+
+    public function showmessage()
+    {
+        $info = contact::all();
+        return view('admin.showmessage',compact('info'));
+    }
+
+    public function deletemessage($id)
+    {
+        $info=contact::find($id);
+        $info->delete();
+
+        return redirect()->back()->with('message','Message Deleted Successfully');
+
+    }
+
 
     public function updatestatus($id)
     {

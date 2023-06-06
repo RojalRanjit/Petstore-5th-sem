@@ -4,7 +4,7 @@
               
 <div class="container shadow p-3 mb-5 mt-5 bg-body rounded" style="width: 500px">
     <h1 style="text-align: center">Contact Us</h1>
-    <form class="container flex-column" action="{{route('message')}}" method="post">
+    <form class="container flex-column" action="{{route('newmessage')}}" method="post">
     @csrf
     <div class="mb-3">
         <label class="form-label">Name: </label>

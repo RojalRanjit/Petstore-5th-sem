@@ -14,7 +14,7 @@
                         <h6 class="text-primary text-uppercase">About Us</h6>
                         <h1 class="display-5 text-uppercase mb-0">We Keep Your Pets Happy All Time</h1>
                     </div>
-                    <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
+                    <h4 class="text-body mb-4">Our knowledgeable staff is always available to answer any questions you may have and to provide expert advice on pet care.</h4>
                     <div class="bg-light p-4">
                         <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item w-50" role="presentation">
@@ -30,10 +30,10 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-                                <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="mb-0">Our mission is to make sure your furry friends are happy and healthy. We understand that pets are an important part of your family, and we strive to provide a warm and welcoming environment for both you and your pets.</p>
                             </div>
                             <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-                                <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="mb-0">At our pet shop, we believe in giving back to the community. We frequently donate to local animal shelters and rescue organizations to help animals in need. We also host adoption events throughout the year to connect pets with loving homes.</p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Rojal Ranjit</h5>
+                        <h5 class="text-uppercase">Claude Bourgelat</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Sandeep Mainali</h5>
+                        <h5 class="text-uppercase">Elionor McGrath</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -96,7 +96,39 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Saugat Silwal</h5>
+                        <h5 class="text-uppercase">Louis J.Camuti</h5>
+                        <p class="m-0">Designation</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase">James Herriot</h5>
+                        <p class="m-0">Designation</p>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-5.jpg" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+                                <a class="btn btn-light btn-square mx-1" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light text-center p-4">
+                        <h5 class="text-uppercase">Patricia O'Connor</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>

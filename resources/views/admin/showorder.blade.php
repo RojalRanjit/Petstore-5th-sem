@@ -27,8 +27,8 @@
                     <td style="padding: 20px">{{$orders->price}}</td>
                     <td style="padding: 20px">{{$orders->quantity}}</td>
                     <td style="padding: 20px">{{$orders->status}}</td>
-                    <td style="padding: 20px"><a class="btn btn-success" href="{{route('updatestatus',$orders->id)}}">Delivered</a></td>
-                    <td><a class="btn btn-danger" onclick="return confirm('Are you sure??')" href="{{route('deleteorder', $orders->id)}}">Delete</a></td>
+                    <td style="padding: 20px"><a class="btn btn-success" href="{{route('updatestatus',$orders->id)}}">Delivered</a>
+                    <a class="btn btn-danger" onclick="return confirm('Are you sure??')" href="{{route('deleteorder', $orders->id)}}">Delete</a></td>
                 </tr>
                 @endforeach
             </table>

@@ -21,7 +21,7 @@
                     <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
 
-                        <img class="img-fluid mb-4" src="/productimage/{{$product->image}}"  alt="">
+                        <img class="img-fluid mb-4" style="height: 250px; width=100px;" src="/productimage/{{$product->image}}"  alt="">
                         <h6 class="text-uppercase">{{$product->title}}</h6>
                         <h5 class="text-primary mb-0">Rs{{$product->price}}</h5>
                         <p>{{$product->description}}</p>
@@ -31,7 +31,7 @@
                                 @csrf
                                 <input type="number" value="1" min="1" class="form-control" style="width: 100px" name="quantity"><br>
                                 <button class="btn btn-primary py-2 px-3" type="submit" value="Add Cart"><i class="bi bi-cart"></i></button>
-                                <button class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></button>
+                                <!-- <button class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></button> -->
                             </form>                          
                         </div>
                     </div>
@@ -53,11 +53,12 @@
 
             $datas=App\Models\Product::where('type','toy')->get();
             @endphp
+            
                 @foreach($datas as $product)
                     <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
 
-                        <img class="img-fluid mb-4" src="/productimage/{{$product->image}}"  alt="">
+                        <img class="img-fluid mb-4" style="height: 250px; width=100px;" src="/productimage/{{$product->image}}"  alt="">
                         <h6 class="text-uppercase">{{$product->title}}</h6>
                         <h5 class="text-primary mb-0">Rs{{$product->price}}</h5>
                         <p>{{$product->description}}</p>
@@ -67,7 +68,7 @@
                                 @csrf
                                 <input type="number" value="1" min="1" class="form-control" style="width: 100px" name="quantity"><br>
                                 <button class="btn btn-primary py-2 px-3" type="submit" value="Add Cart"><i class="bi bi-cart"></i></button>
-                                <button class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></button>
+                                <!-- <button class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></button> -->
                             </form>                          
                         </div>
                     </div>
@@ -85,61 +86,32 @@
                 <h1 class="display-5 text-uppercase mb-0">Pet Accessory</h1>
             </div>
             <div class="owl-carousel product-carousel">
-                <div class="pb-5">
-                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="img/toy-1.jpg" alt="">
-                        <h6 class="text-uppercase">Quality Pet Toys</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
-                        <div class="btn-action d-flex justify-content-center">
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pb-5">
-                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="img/toy-2.jpg" alt="">
-                        <h6 class="text-uppercase">Quality Pet Toys</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
-                        <div class="btn-action d-flex justify-content-center">
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pb-5">
-                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="img/toy-3.jpg" alt="">
-                        <h6 class="text-uppercase">Quality Pet Toys</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
-                        <div class="btn-action d-flex justify-content-center">
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pb-5">
-                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="img/toy-4.jpg" alt="">
-                        <h6 class="text-uppercase">Quality Pet Toys</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
-                        <div class="btn-action d-flex justify-content-center">
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pb-5">
-                    <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="img/toy-5.jpg" alt="">
-                        <h6 class="text-uppercase">Quality Pet Toys</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
-                        <div class="btn-action d-flex justify-content-center">
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
-                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
+            @php 
+
+                $datas=App\Models\Product::where('type','accessory')->get();
+            @endphp
+
+         @foreach($datas as $product)
+        <div class="pb-5">
+        <div class="product-item position-relative bg-light d-flex flex-column text-center">
+
+            <img class="img-fluid mb-4" style="height: 250px; width=100px;" src="/productimage/{{$product->image}}"  alt="">
+            <h6 class="text-uppercase">{{$product->title}}</h6>
+            <h5 class="text-primary mb-0">Rs{{$product->price}}</h5>
+            <p>{{$product->description}}</p>
+
+            <div class="btn-action d-flex justify-content-center">
+                <form action="{{route('addcart',$product->id)}}" method="post">
+                    @csrf
+                    <input type="number" value="1" min="1" class="form-control" style="width: 100px" name="quantity"><br>
+                    <button class="btn btn-primary py-2 px-3" type="submit" value="Add Cart"><i class="bi bi-cart"></i></button>
+                    <!-- <button class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></button> -->
+                </form>                          
+            </div>
+        </div>
+        </div>
+
+            @endforeach
             </div>
         </div>
     </div>
@@ -152,12 +124,11 @@
             <div class="row gx-5 justify-content-start">
                 <div class="col-lg-7">
                     <div class="border-start border-5 border-dark ps-5 mb-5">
-                        <h6 class="text-dark text-uppercase">Special Offer</h6>
-                        <h1 class="display-5 text-uppercase text-white mb-0">Save 20% on all items your first order</h1>
+                        <h6 class="text-dark text-uppercase">Special Campaign</h6>
+                        <h1 class="display-5 text-uppercase text-white mb-0">Give a furry friend a forever home</h1>
                     </div>
-                    <p class="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit. Sea dolore sed et.</p>
-                    <a href="" class="btn btn-light py-md-3 px-md-5 me-3">Shop Now</a>
-                    <a href="" class="btn btn-outline-light py-md-3 px-md-5">Read More</a>
+                    <p class="text-white mb-4">If you are interested in adopting a pet, we encourage you to visit our store and speak with one of our adoption specialists. They can guide you through the adoption process, answer any questions you may have, and help you find the perfect pet for your lifestyle and home.</p>
+                    <a href="{{route('contact')}}" class="btn btn-light py-md-3 px-md-5 me-3">Contact Now</a>
                 </div>
             </div>
         </div>

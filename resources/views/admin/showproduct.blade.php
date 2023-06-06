@@ -17,6 +17,7 @@
                     <td style="padding: 20px">Description</td>
                     <td style="padding: 20px">Quantity</td>
                     <td style="padding: 20px">Price</td>
+                    <td style="padding: 20px">Type</td>
                     <td style="padding: 20px">Image</td>
                     <td style="padding: 20px">Update</td>
                     <td style="padding: 20px">Delete</td>
@@ -27,6 +28,7 @@
                     <td>{{$product->description}}</td>
                     <td>{{$product->quantity}}</td>
                     <td>{{$product->price}}</td>
+                    <td>{{$product->type}}</td>
                     <td><img style="height: 100px; width=100px;" src="/productimage/{{$product->image}}"></td>
                     <td><a class="btn btn-warning" href="{{route('updateview', $product->id)}}">Update</a></td>
                     <td><a class="btn btn-danger" onclick="return confirm('Are you sure??')" href="{{route('deleteproduct', $product->id)}}">Delete</a></td>

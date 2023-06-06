@@ -7,7 +7,7 @@
                 <div class="col-lg-8 text-center text-lg-start">
                     <h1 class="display-1 text-uppercase text-dark mb-lg-4">Pet Shop</h1>
                     <h1 class="text-uppercase text-white mb-lg-4">Make Your Pets Happy</h1>
-                    <p class="fs-4 text-white mb-lg-4">Dolore tempor clita lorem rebum kasd eirmod dolore diam eos kasd. Kasd clita ea justo est sed kasd erat clita sea</p>
+                    <p class="fs-4 text-white mb-lg-4">Welcome to our pet shop! We are a team of animal lovers dedicated to providing high-quality products and services to pet owners in our community.</p>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="{{route('about')}}" class="btn btn-outline-light border-2 py-md-3 px-md-5 me-5">Read More</a>
                     </div>
@@ -31,7 +31,7 @@
                         <h6 class="text-primary text-uppercase">About Us</h6>
                         <h1 class="display-5 text-uppercase mb-0">We Keep Your Pets Happy All Time</h1>
                     </div>
-                    <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
+                    <h4 class="text-body mb-4">Our knowledgeable staff is always available to answer any questions you may have and to provide expert advice on pet care.</h4>
                     <div class="bg-light p-4">
                         <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item w-50" role="presentation">
@@ -47,10 +47,10 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-                                <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="mb-0">Our mission is to make sure your furry friends are happy and healthy. We understand that pets are an important part of your family, and we strive to provide a warm and welcoming environment for both you and your pets.</p>
                             </div>
                             <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-                                <p class="mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                                <p class="mb-0">At our pet shop, we believe in giving back to the community. We frequently donate to local animal shelters and rescue organizations to help animals in need. We also host adoption events throughout the year to connect pets with loving homes.</p>
                             </div>
                         </div>
                     </div>
@@ -143,11 +143,10 @@
                 <h1 class="display-5 text-uppercase mb-0">Products For Your Best Friends</h1>
             </div>
             <div class="owl-carousel product-carousel">
-                
-                @foreach($data as $product)
+                @foreach($data as $product)      
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="/productimage/{{$product->image}}"  alt="">
+                        <img class="img-fluid mb-4" style="height: 250px; width=100px;" src="/productimage/{{$product->image}}"  alt="">
                         <h6 class="text-uppercase">{{$product->title}}</h6>
                         <h5 class="text-primary mb-0">Rs{{$product->price}}</h5>
                         <p>{{$product->description}}</p>
@@ -157,7 +156,7 @@
                                 @csrf
                                 <input type="number" value="1" min="1" class="form-control" style="width: 100px" name="quantity"><br>
                                 <button class="btn btn-primary py-2 px-3" type="submit" value="Add Cart"><i class="bi bi-cart"></i></button>
-                                <button aria-label="Quick view"  class="action-btn btn btn-primary py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickViewModal" id="{{$product->id}}" onclick="productView(this.id)"><i class="bi bi-eye"></i></button>
+                                <!-- <button aria-label="Quick view"  class="action-btn btn btn-primary py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickViewModal" id="{{$product->id}}" onclick="productView(this.id)"><i class="bi bi-eye"></i></button> -->
                             </form>                          
                         </div>
                     </div>
@@ -175,12 +174,11 @@
             <div class="row gx-5 justify-content-start">
                 <div class="col-lg-7">
                     <div class="border-start border-5 border-dark ps-5 mb-5">
-                        <h6 class="text-dark text-uppercase">Special Offer</h6>
-                        <h1 class="display-5 text-uppercase text-white mb-0">Save 20% on all items for your first order</h1>
+                        <h6 class="text-dark text-uppercase">Special Campaign</h6>
+                        <h1 class="display-5 text-uppercase text-white mb-0">Adopt a furry friend, and find a lifelong companion!</h1>
                     </div>
-                    <p class="text-white mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit. Sea dolore sed et.</p>
-                    <a href="{{route('product')}}" class="btn btn-light py-md-3 px-md-5 me-3">Shop Now</a>
-                    <a href="{{route('about')}}" class="btn btn-outline-light py-md-3 px-md-5">Read More</a>
+                    <p class="text-white mb-4">By adopting a pet, you are not only giving an animal a second chance at a happy life, but you are also gaining a loyal companion who will bring joy and love into your home for years to come.</p>
+                    <a href="{{route('contact')}}" class="btn btn-light py-md-3 px-md-5 me-3">Contact Now</a>
                 </div>
             </div>
         </div>
@@ -207,7 +205,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Full Name</h5>
+                        <h5 class="text-uppercase">Claude Bourgelat</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -223,7 +221,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Full Name</h5>
+                        <h5 class="text-uppercase">Elionor McGrath</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -239,7 +237,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Full Name</h5>
+                        <h5 class="text-uppercase">Louis J.Camuti</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -255,7 +253,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Full Name</h5>
+                        <h5 class="text-uppercase">James Herriot</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>
@@ -271,7 +269,7 @@
                         </div>
                     </div>
                     <div class="bg-light text-center p-4">
-                        <h5 class="text-uppercase">Full Name</h5>
+                        <h5 class="text-uppercase">Patricia O'Connor</h5>
                         <p class="m-0">Designation</p>
                     </div>
                 </div>

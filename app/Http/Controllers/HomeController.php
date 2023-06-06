@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Contact;
 
 class HomeController extends Controller
 {
@@ -48,16 +49,6 @@ class HomeController extends Controller
         $count = cart::where('phone',$user->phone)->count();
         return view('product',compact('data','count'));
     }
-
-    // public function service()
-    // {
-    //     return view('service');
-    // }
-
-    // public function blog()
-    // {
-    //     return view('blog');
-    // }
 
     public function contact()
     {
@@ -98,13 +89,15 @@ class HomeController extends Controller
             $product = product::find($id);
 
             $cart = new cart;
+            $image = $request->file;
 
             $cart->name=$user->name;
+            $cart->email=$user->email;
             $cart->phone=$user->phone;
             $cart->address=$user->address;
-
             $cart->product_title=$product->title;
             $cart->price=$product->price;
+            $cart->image=$product->image;
             $cart->quantity=$request->quantity;
             $cart->save();
 
@@ -115,6 +108,18 @@ class HomeController extends Controller
         {
             return redirect('login');
         }
+    }
+    public function newmessage(Request $request)
+    {
+        $info = new contact();
+
+        $info->Name=$request->name;
+        $info->Email=$request->email;
+        $info->Phone=$request->phone;
+        $info->Message=$request->message;
+        $info->save();
+
+        return redirect()->back()->with('message','Message sent successfully');
     }
 
     public function showcart()
@@ -140,10 +145,12 @@ class HomeController extends Controller
         $phone=$user->phone;
         $email=$user->email;
         $address=$user->address;
+ 
 
         foreach($request->productname as $key=>$productname)
         {
             $order = new order;
+            
 
             $order -> product_name=$request->productname[$key];
             $order -> price=$request->price[$key];
@@ -159,5 +166,15 @@ class HomeController extends Controller
 
         DB::table('carts')->where('phone',$phone)->delete();
         return redirect()->back()->with('message','Order Successful');
+    }
+
+    public function myorder()
+    {
+        $user = auth()->user();
+        $cart=cart::where('phone',$user->phone)->get();
+        $count = cart::where('phone',$user->phone)->count();
+        $order = order::where('email',auth()->user()->email)->get();    
+
+        return view ('myorder',compact('count','order'));
     }
 }

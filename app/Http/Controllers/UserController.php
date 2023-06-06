@@ -65,18 +65,6 @@ class UserController extends Controller
         }
     }
 
-    public function message(Request $request)
-    {
-        $info = new Contact();
-
-        $info->Name=$request->name;
-        $info->Email=$request->email;
-        $info->Phone=$request->phone;
-        $info->Message=$request->message;
-        $info->save();
-
-        return redirect()->back()->with('message','Message sent successfully');
-    }
 
     public function logout(){
         auth()->logout();
